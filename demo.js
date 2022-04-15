@@ -153,18 +153,18 @@ function updateSensorList(){
             text = "<i class='fa-solid fa-circle' style='color:red'></i> "+text;
         }
         if(Sensors[i].status=="Previewing"){
-            text +=" <button class='btn' onclick='stopPreviewSensor(\""+sensorName+"\")' style='background-color: lightgreen;' ><i class='fa-solid fa-magnifying-glass'></i></button>"
+            text +=" <button class='btn' onclick='stopPreviewSensor(\""+Sensors[i].name+"\")' style='background-color: lightgreen;' ><i class='fa-solid fa-magnifying-glass'></i></button>"
         }
         else{
-            text +=" <button class='btn' onclick='previewSensor(\""+sensorName+"\")' style='background-color: pink;'><i class='fa-solid fa-magnifying-glass'></i></button>"
+            text +=" <button class='btn' onclick='previewSensor(\""+Sensors[i].name+"\")' style='background-color: pink;'><i class='fa-solid fa-magnifying-glass'></i></button>"
         }
         if(Sensors[i].status=="Recording"){
-            text +=" <button class='btn' onclick='stopSensor(\""+sensorName+"\")' style='background-color: lightgreen;'><i class='fa-solid fa-video'></i></button>"
+            text +=" <button class='btn' onclick='stopSensor(\""+Sensors[i].name+"\")' style='background-color: lightgreen;'><i class='fa-solid fa-video'></i></button>"
         }
         else {
-            text +=" <button class='btn' onclick='startSensor(\""+sensorName+"\")' style='background-color: pink;'><i class='fa-solid fa-video'></i></button>"
+            text +=" <button class='btn' onclick='startSensor(\""+Sensors[i].name+"\")' style='background-color: pink;'><i class='fa-solid fa-video'></i></button>"
         }
-        text += " <button class='btn' onclick='shutdownSensor(\""+sensorName+"\")'><i class='fa-solid fa-power-off'></i></button>";
+        text += " <button class='btn' onclick='shutdownSensor(\""+Sensors[i].name+"\")'><i class='fa-solid fa-power-off'></i></button>";
         tag.innerHTML =text;
         
         element.appendChild(tag);
